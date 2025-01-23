@@ -4,7 +4,6 @@
     import type { Employee, Status } from "$lib/utills/Types/employeeTypes";
 
     export let employee: Employee;
-    $: console.log({employee});
 </script>
 
 <td>

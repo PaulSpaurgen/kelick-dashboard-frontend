@@ -12,6 +12,7 @@
     import { onMount } from "svelte";
     import { excelLoadingStore } from "$lib/stores/commonStore";
     import lottie from 'lottie-web';
+    import Toast from "$lib/atoms/common/Toast.svelte";
     
     
 
@@ -59,8 +60,10 @@
 
 </script>
 <div class="h-[85vh] overflow-y-auto">
+   
     {#if $excelLoadingStore.generateCelebs}
         <div bind:this={container} class="w-[600px] h-[600px] absolute bottom-[100px] right-1/2 translate-x-1/2  bg-transparent z-50"></div>
+        <Toast message="Employees successfully added" variant="outline" onClose={() => {}} />
     {/if}
     
   
