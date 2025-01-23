@@ -24,6 +24,7 @@
 	},
 	"dependencies": {
 		"chart.js": "^4.4.7",
-		"lottie-web": "^5.12.2"
+		"lottie-web": "^5.12.2",
+		"xlsx": "^0.18.5"
 	}
 }
