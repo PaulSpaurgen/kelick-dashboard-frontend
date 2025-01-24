@@ -30,8 +30,9 @@ export default {
         accent: '#3B82F6',
       },
       transitionProperty: {
-        'height': 'height',
+        'size': 'width, height',
         'spacing': 'margin, padding',
+        'height': 'height',
       }
     }
   },

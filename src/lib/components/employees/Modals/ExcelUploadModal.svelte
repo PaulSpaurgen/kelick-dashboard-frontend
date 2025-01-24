@@ -225,7 +225,7 @@
             </div>
             {#each files as file}
                 <div
-                    class="flex w-full items-center justify-between gap-[16px] mt-[16px] cursor-pointer hover:bg-backgroundHover rounded-xl p-[8px] px-[16px] animate-[fadeIn_0.3s_ease-in-out] transition-all"
+                    class="flex w-full items-center justify-between gap-[16px] mt-[16px] cursor-pointer hover:bg-backgroundHover rounded-xl p-[8px] px-[16px] "
                 >
                     <div class="flex items-center gap-[16px]">
                         <img
