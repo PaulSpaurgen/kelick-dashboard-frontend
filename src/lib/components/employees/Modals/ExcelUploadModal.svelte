@@ -58,6 +58,7 @@
     const handleContinue = async () => {
         if (files.length === 0) {
             console.error("No files selected");
+            alert("Please select at least one file");
             return;
         }
 

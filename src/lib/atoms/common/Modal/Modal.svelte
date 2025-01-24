@@ -21,7 +21,6 @@
                 requestAnimationFrame(() => {
                     if(isAnimating) return;
                     isAnimating = true;
-                    console.log('requestAnimationFrame')
                     // Get current height before any changes
               
                     
@@ -29,13 +28,18 @@
                     contentWrapper.style.height = 'auto';
                     const targetHeight = contentWrapper.scrollHeight; 
 
+                    const isDecreasing = currentHeight > targetHeight;
+
                     // Create timeline for animation
                     currentAnimation = gsap.timeline({
                         onComplete: () => {
-                            contentWrapper.style.height = 'auto';
+                            if(isDecreasing) {
+                                contentWrapper.style.height = 'auto';
+                            } else {
+                                contentWrapper.style.height = currentHeight + 'px';
+                            }
                             isAnimating = false;
                             currentHeight = targetHeight;
-                            console.log('onComplete')
                         }
                     });
 
@@ -60,7 +64,6 @@
             if (content) {
                 resizeObserver.observe(content);
             }
-            console.log('onMount')
         }
     });
 
